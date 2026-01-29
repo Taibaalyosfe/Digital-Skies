@@ -1,0 +1,485 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    background: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Top */
+.header-top {
+    background: #f5c400;
+    color: #000;
+    display: flex;
+    justify-content: space-between; /* لتوزيع العناصر على الجانبين */
+    padding: 10px 40px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.contact i {
+    margin-right: 8px;
+}
+
+.auth a {
+    color: #000;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s;
+}
+
+.auth a:hover {
+    color: #4b2c6f;
+}
+
+.auth a i {
+    margin-right: 5px;
+}
+
+/* Navbar */
+.navbar {
+    background: #4b2c6f;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;/* نص عريض */
+    gap: 10px; /* مسافة بين الصورة والنص */
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;/* سماكةمتوسطه */
+    padding: 5px 0;
+    position: relative;/* يخل الرابط في وضعية ال  */
+}
+
+.nav-menu a.active,
+.nav-menu a:hover {
+    color: #f5c400;
+}
+
+.nav-menu a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #f5c400;
+}
+
+/* Hero Section */
+.hero {
+    height: 85vh;/* ارتفاع الشاشة كاملة */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),/* يغطي الصورة ويعطى تاثير التعتيم */ 
+                url("../images/Yemenia_Airbus_A310_F-OHPR.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.SA {
+    color: #f5c400;
+    font-family: 'Brush Script MT', cursive;
+    font-size: 4rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin: 0 auto 30px;
+}
+
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #f5c400;
+    color: #4b2c6f;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.cta-button:hover {
+    background: #ffd700;
+    transform: translateY(-3px);/* يحرك الزر لاعلى بمقدار 3 يعطي احساس انه يرتفع عند التفاعل  */
+    box-shadow: 0 10px 20px rgba(245, 196, 0, 0.3);/*  ظل ناعم يعطى عمق الزر */
+}
+
+/* Quick Search */
+.quick-search {
+    background: #f8f9fa;
+    padding: 50px 20px;
+    margin-top: -50px;/* يحرك العنصر للأعلى بمقدار 50px (سالب)، غالبًا عشان يتداخل مع القسم اللي قبله */
+    position: relative;/*  خلي العنصر في وضعية relative*/
+    z-index: 2;
+}
+
+.search-box {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;/* حواف دائريه */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);/* لون الظل */
+}
+
+.search-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.search-tabs button {
+    padding: 10px 25px;
+    border: none;
+    background: none;
+    color: #666;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.search-tabs button.active {
+    background: #4b2c6f;
+    color: white;
+}
+
+.input-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    align-items: end;/* يوسّط العناصر عموديًا بحيث كلها تصطف عند أسفل الشبكه */
+}
+
+.input-field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: white;
+}
+
+.input-field i {
+    color: #f5c400;
+}
+
+.input-field input,
+.input-field select {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    background: transparent;
+}
+
+.search-btn {
+    background: #4b2c6f;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background 0.3s;
+}
+
+.search-btn:hover {
+    background: #f5c400;
+}
+
+/* Services */
+.services {
+    padding: 80px 20px;
+    text-align: center;
+    background: white;
+}
+
+.services h2,
+.destinations h2 {
+    font-size: 2.5rem;/* يعني وحدة قياس تعتمد على حجم الخط الأساسي */
+    color: #4b2c6f;
+    margin-bottom: 15px;/* مسافه تحت العنوان */
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.service {
+    padding: 30px 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    background: #4b2c6f;
+    color: white;
+}
+
+.service:hover i,
+.service:hover h3,
+.service:hover p {
+    color: white;
+}
+
+.service i {
+    font-size: 40px;
+    color: #4b2c6f;
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    color: #4b2c6f;
+    margin-bottom: 10px;
+}
+
+.service p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Destinations */
+.desti {
+    padding: 80px 20px;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.dest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+}
+
+.dest {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 300px;
+}
+
+.destination img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.destination:hover img {
+    transform: scale(1.1);
+}
+
+.info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 20px;
+    text-align: left;
+}
+
+.info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+}
+
+.price {
+    color: #f5c400;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.view-all {
+    display: inline-block;
+    color: #4b2c6f;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+.view-all:hover {
+    color: #f5c400;
+}
+
+/* Footer */
+footer {
+    background: #4b2c6f;
+    color: white;
+    padding: 50px 20px 30px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.brand img {
+    width: 60px;
+    height: 60px;
+}
+
+.brand h3 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.brand p {
+    color: rgba(255,255,255,0.8);
+}
+
+.copyright {
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .input-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .search-btn {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-top,
+    .navbar {
+        padding: 15px 20px;
+    }
+    
+    .nav-menu {
+        gap: 15px;
+        font-size: 14px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .highlight {
+        font-size: 3rem;
+    }
+    
+    .services-grid,
+    .destinations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero {
+        height: 70vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .highlight {
+        font-size: 2.5rem;
+    }
+    
+    .services-grid,
+    .destinations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .input-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-btn {
+        grid-column: span 1;
+    }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>حجز الرحلات | Digital Skies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- الشريط العلوي -->
+<div class="top-bar">
+    <div class="top-left">
+ 782680520 967+ <i class="fa-solid fa-phone"></i>    </div>
+    <div class="top-right">
+        <a href="login.html"><i class="fa-solid fa-user"></i> تسجيل الدخول</a>
+        <a href="register.html">إنشاء حساب</a>
+    </div>
+</div>
+
+<!-- الهيدر -->
+<header class="main-header">
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="images/LOGO/DS LOGO PNG.png" alt="Digital Skies">
+            <span>Digital Skies</span>
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="Explore.html">استكشف</a></li>
+            <li><a href="Booking.html" class="active">الحجوزات</a></li>
+            <li><a href="Find Ticket.html">البحث عن تذكرة</a></li>
+            <li><a href="blog.html">المدونة</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+        
+        <a href="search.html" class="search-btn"><i class="fa-solid fa-search"></i></a>
+    </nav>
+</header>
+
+<!-- الهيرو -->
+<section class="page-hero">
+    <div class="hero-content">
+        <h1>احجز رحلتك</h1>
+        <p>عملية حجز سهلة وسريعة</p>
+    </div>
+</section>
+
+<!-- نموذج الحجز -->
+<section class="booking-form">
+    <div class="container">
+        <div class="form-card">
+            <h2><i class="fa-solid fa-plane"></i> حجز رحلة</h2>
+            
+            <form>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-location-dot"></i> من</label>
+                        <input type="text" placeholder="المدينة أو المطار" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-location-dot"></i> إلى</label>
+                        <input type="text" placeholder="الوجهة" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-calendar"></i> تاريخ المغادرة</label>
+                        <input type="date" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-calendar"></i> تاريخ العودة</label>
+                        <input type="date">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-user-group"></i> عدد المسافرين</label>
+                        <select>
+                            <option>مسافر واحد</option>
+                            <option>مسافرين</option>
+                            <option>3 مسافرين</option>
+                            <option>4+ مسافرين</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-suitcase"></i> درجة الرحلة</label>
+                        <select>
+                            <option>اقتصادي</option>
+                            <option>رجال أعمال</option>
+                            <option>الدرجة الأولى</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="submit-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i> البحث عن الرحلات
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- الرحلات -->
+<section class="flights">
+    <div class="container">
+        <h2>الرحلات المتاحة</h2>
+        <!-- البطاقات كما هي -->
+    </div>
+</section>
+
+<!-- الفوتر -->
+<footer class="footer">
+ <p> تم التطوير بواسطة : طيبه اليوسفي && ماجد محمد | جميع الحقوق محفوظه -الأجواء الرقمية 2026 </p>
+
+</body>
+</html>

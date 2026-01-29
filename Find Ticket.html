@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>البحث عن التذاكر | Digital Skies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Find.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<!-- الشريط العلوي -->
+<div class="top-bar">
+    <div class="top-left">
+        <span><i class="fa-solid fa-phone"></i> +967 826 80520</span>
+    </div>
+    <div class="top-right">
+        <a href="login.html"><i class="fa-solid fa-user"></i> تسجيل الدخول</a>
+        <a href="register.html">إنشاء حساب</a>
+    </div>
+</div>
+
+<!-- الرأس -->
+<header class="main-header">
+    <nav class="navbar">
+        <a href="index.html" class="logo">
+            <img src="images/LOGO/DS LOGO PNG.png" alt="Digital Skies">
+            <span>Digital Skies</span>
+        </a>
+        
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">حول</a></li>
+            <li><a href="Explore.html">استكشاف</a></li>
+            <li><a href="Booking.html">الحجوزات</a></li>
+            <li><a href="Find Ticket.html" class="active">البحث عن التذاكر</a></li>
+            <li><a href="blog.html">المدونة</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+        
+        <a href="search.html" class="search-btn"><i class="fa-solid fa-search"></i></a>
+    </nav>
+</header>
+
+<!-- الهيرو -->
+<section class="page-hero">
+    <div class="hero-content">
+        <h1>ابحث عن تذكرتك</h1>
+        <p>ابحث وقارن أسعار الرحلات</p>
+    </div>
+</section>
+
+<!-- نموذج البحث -->
+<section class="search-ticket">
+    <div class="container">
+        <div class="search-card">
+            <div class="search-tabs">
+                <button class="tab-btn active">رحلة ذهاب فقط</button>
+                <button class="tab-btn">ذهاب وعودة</button>
+                <button class="tab-btn">رحلات متعددة المدن</button>
+            </div>
+            
+            <form class="search-form">
+                <div class="form-row">
+                    <div class="input-group">
+                        <label><i class="fa-solid fa-plane-departure"></i> من</label>
+                        <input type="text" placeholder="المدينة أو المطار" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label><i class="fa-solid fa-plane-arrival"></i> إلى</label>
+                        <input type="text" placeholder="الوجهة" required>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="input-group">
+                        <label><i class="fa-solid fa-calendar"></i> تاريخ المغادرة</label>
+                        <input type="date" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label><i class="fa-solid fa-calendar"></i> تاريخ العودة</label>
+                        <input type="date">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="input-group">
+                        <label><i class="fa-solid fa-user-group"></i> المسافرون</label>
+                        <div class="counter">
+                            <button type="button" class="counter-btn">-</button>
+                            <span>1</span>
+                            <button type="button" class="counter-btn">+</button>
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label><i class="fa-solid fa-suitcase"></i> الدرجة</label>
+                        <select>
+                            <option>اقتصادية</option>
+                            <option>اقتصادية مميزة</option>
+                            <option>أعمال</option>
+                            <option>أولى</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <button type="submit" class="search-submit">
+                    <i class="fa-solid fa-magnifying-glass"></i> ابحث عن التذاكر
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- نتائج البحث -->
+<section class="results">
+    <div class="container">
+        <h2>التذاكر المتاحة</h2>
+        
+        <div class="filter-bar">
+            <div class="filter-group">
+                <span>ترتيب حسب:</span>
+                <select>
+                    <option>السعر (الأقل أولاً)</option>
+                    <option>السعر (الأعلى أولاً)</option>
+                    <option>مدة الرحلة</option>
+                    <option>وقت الإقلاع</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <span>عدد التوقفات:</span>
+                <button class="filter-btn active">الكل</button>
+                <button class="filter-btn">بدون توقف</button>
+                <button class="filter-btn">توقف واحد</button>
+                <button class="filter-btn">2+ توقفات</button>
+            </div>
+        </div>
+        
+        <div class="tickets-list">
+            <!-- تذكرة 1 -->
+            <div class="ticket-card">
+                <div class="ticket-header">
+                    <div class="airline-info">
+                        <i class="fa-solid fa-plane"></i>
+                        <div>
+                            <h3>الإمارات</h3>
+                            <span>EK 203</span>
+                        </div>
+                    </div>
+                    <div class="price-tag">
+                        <span class="price">$499</span>
+                        <span class="per-person">لكل شخص</span>
+                    </div>
+                </div>
+                
+                <div class="ticket-body">
+                    <div class="flight-route">
+                        <div class="depart">
+                            <strong>DXB</strong>
+                            <span>10:00 صباحاً</span>
+                        </div>
+                        
+                        <div class="duration">
+                            <span>8س 30د</span>
+                            <div class="line"></div>
+                            <span class="stops">مباشر</span>
+                        </div>
+                        
+                        <div class="arrive">
+                            <strong>JFK</strong>
+                            <span>6:30 مساءً</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ticket-footer">
+                    <div class="flight-features">
+                        <span><i class="fa-solid fa-suitcase"></i> 23كغ</span>
+                        <span><i class="fa-solid fa-utensils"></i> وجبة</span>
+                        <span><i class="fa-solid fa-wifi"></i> واي فاي</span>
+                    </div>
+                    <button class="select-btn">اختر</button>
+                </div>
+            </div>
+            
+            <!-- تذكرة 2 -->
+            <div class="ticket-card">
+                <div class="ticket-header">
+                    <div class="airline-info">
+                        <i class="fa-solid fa-plane"></i>
+                        <div>
+                            <h3>القطرية</h3>
+                            <span>QR 701</span>
+                        </div>
+                    </div>
+                    <div class="price-tag">
+                        <span class="price">$399</span>
+                        <span class="per-person">لكل شخص</span>
+                    </div>
+                </div>
+                
+                <div class="ticket-body">
+                    <div class="flight-route">
+                        <div class="depart">
+                            <strong>DOH</strong>
+                            <span>2:00 مساءً</span>
+                        </div>
+                        
+                        <div class="duration">
+                            <span>6س 15د</span>
+                            <div class="line"></div>
+                            <span class="stops">توقف واحد</span>
+                        </div>
+                        
+                        <div class="arrive">
+                            <strong>CDG</strong>
+                            <span>8:15 مساءً</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ticket-footer">
+                    <div class="flight-features">
+                        <span><i class="fa-solid fa-suitcase"></i> 30كغ</span>
+                        <span><i class="fa-solid fa-utensils"></i> وجبة</span>
+                        <span><i class="fa-solid fa-tv"></i> ترفيه</span>
+                    </div>
+                    <button class="select-btn">اختر</button>
+                </div>
+            </div>
+            
+            <!-- تذكرة 3 -->
+            <div class="ticket-card">
+                <div class="ticket-header">
+                    <div class="airline-info">
+                        <i class="fa-solid fa-plane"></i>
+                        <div>
+                            <h3>الخطوط التركية</h3>
+                            <span>TK 198</span>
+                        </div>
+                    </div>
+                    <div class="price-tag">
+                        <span class="price">$299</span>
+                        <span class="per-person">لكل شخص</span>
+                    </div>
+                </div>
+                
+                <div class="ticket-body">
+                    <div class="flight-route">
+                        <div class="depart">
+                            <strong>IST</strong>
+                            <span>8:00 صباحاً</span>
+                        </div>
+                        
+                        <div class="duration">
+                            <span>4س 45د</span>
+                            <div class="line"></div>
+                            <span class="stops">مباشر</span>
+                        </div>
+                        
+                        <div class="arrive">
+                            <strong>LHR</strong>
+                            <span>10:45 صباحاً</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ticket-footer">
+                    <div class="flight-features">
+                        <span><i class="fa-solid fa-suitcase"></i> 20كغ</span>
+                        <span><i class="fa-solid fa-coffee"></i> وجبة خفيفة</span>
+                        <span><i class="fa-solid fa-chair"></i> عادي</span>
+                    </div>
+                    <button class="select-btn">اختر</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- الفوتر -->
+<footer class="footer">
+  تم التطوير بواسطة : طيبه اليوسفي && ماجد محمد | جميع الحقوق محفوظه -الأجواء الرقمية 2026 </p>
+
+</body>
+</html>

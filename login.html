@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>تسجيل الدخول | Digital Skies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="login-container">
+    <!-- الجانب الأيسر - الشعار والمعلومات -->
+    <div class="login-left">
+        <a href="index.html" class="logo">
+            <img src="images/LOGO/DS LOGO PNG.png" alt="Digital Skies">
+            <span>Digital Skies</span>
+        </a>
+        
+        <div class="welcome-text">
+            <h1>أهلاً بعودتك!</h1>
+            <p>قم بتسجيل الدخول للوصول إلى حسابك وحجز رحلتك القادمة.</p>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <i class="fa-solid fa-plane"></i>
+                <p>حجز الرحلات بسهولة</p>
+            </div>
+            <div class="feature">
+                <i class="fa-solid fa-hotel"></i>
+                <p>إدارة حجوزات الفنادق</p>
+            </div>
+            <div class="feature">
+                <i class="fa-solid fa-bell"></i>
+                <p>الحصول على تنبيهات الأسعار</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- الجانب الأيمن - نموذج تسجيل الدخول -->
+    <div class="login-right">
+        <div class="login-form-container">
+            <div class="form-header">
+                <h2>تسجيل الدخول</h2>
+                <p>أدخل بياناتك للمتابعة</p>
+            </div>
+            
+            <form class="login-form">
+                <div class="input-group">
+                    <label for="email">
+                        <i class="fa-solid fa-envelope"></i> البريد الإلكتروني
+                    </label>
+                    <input type="email" id="email" placeholder="أدخل بريدك الإلكتروني" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">
+                        <i class="fa-solid fa-lock"></i> كلمة المرور
+                    </label>
+                    <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
+                    <span class="show-password" onclick="togglePassword()">
+                        <i class="fa-solid fa-eye"></i>
+                    </span>
+                </div>
+                
+                <div class="form-options">
+                    <label class="remember">
+                        <input type="checkbox"> تذكرني
+                    </label>
+                    <a href="forgot-password.html" class="forgot-link">نسيت كلمة المرور؟</a>
+                </div>
+                
+                <button type="submit" class="login-btn">
+                    <i class="fa-solid fa-right-to-bracket"></i> تسجيل الدخول
+                </button>
+                
+                <div class="divider">
+                    <span>أو تسجيل الدخول بواسطة</span>
+                </div>
+                
+                <div class="social-login">
+                    <button type="button" class="social-btn google">
+                        <i class="fa-brands fa-google"></i> جوجل
+                    </button>
+                    <button type="button" class="social-btn facebook">
+                        <i class="fa-brands fa-facebook"></i> فيسبوك
+                    </button>
+                </div>
+                
+                <div class="signup-link">
+                    لا تملك حساباً؟ <a href="register.html">إنشاء حساب</a>
+                </div>
+            </form>
+        </div>
+        
+        <div class="back-home">
+            <a href="index.html">
+                <i class="fa-solid fa-arrow-left"></i> العودة للرئيسية
+            </a>
+        </div>
+    </div>
+</div>
+
+<script>
+function togglePassword() {
+    const passwordInput = document.getElementById('password');
+    const eyeIcon = document.querySelector('.show-password i');
+    
+    if (passwordInput.type === 'password') {
+        passwordInput.type = 'text';
+        eyeIcon.className = 'fa-solid fa-eye-slash';
+    } else {
+        passwordInput.type = 'password';
+        eyeIcon.className = 'fa-solid fa-eye';
+    }
+}
+</script>
+
+</body>
+</html>
